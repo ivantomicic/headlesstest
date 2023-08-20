@@ -1,0 +1,239 @@
+@import '../variables';
+@import '../mixins/breakpoints';
+
+$font-weight: (
+  extraLight: 200,
+  light: 300,
+  regular: 400,
+  semibold: 600,
+  /*medium in Theme.jsx*/ bold: 700,
+  black: 900,
+);
+
+%h1 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 3.75rem; // 60px
+  line-height: 1.133;
+  letter-spacing: -0.031rem; // -0.5px
+  font-weight: map-get($font-weight, light);
+
+  @include breakpoint-up(m) {
+    font-size: 6rem; // 96px
+    line-height: 1.125;
+    letter-spacing: -0.094rem; // -1.5px
+    font-weight: map-get($font-weight, extraLight);
+  }
+}
+
+%h2 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 2rem; // 32px
+  line-height: 1.25;
+  letter-spacing: 0.031rem; // 0.5px
+  font-weight: map-get($font-weight, black);
+
+  @include breakpoint-up(m) {
+    font-size: 3.75rem; // 60px
+    line-height: 1.133;
+    letter-spacing: -0.031rem; // -0.5px
+    font-weight: map-get($font-weight, black);
+  }
+}
+
+%h3 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.75rem; // 28px
+  line-height: 1.25;
+  letter-spacing: 0.019rem; // 0.3px
+  font-weight: map-get($font-weight, regular);
+
+  @include breakpoint-up(m) {
+    font-size: 3rem; // 48px
+  }
+}
+
+%h4 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.5rem; // 24px
+  line-height: 1.25;
+  letter-spacing: 0.031rem; // 0.5px
+  font-weight: map-get($font-weight, black);
+
+  @include breakpoint-up(m) {
+    font-size: 2rem; // 32px
+  }
+}
+
+%h5 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.25rem; // 20px
+  line-height: 1.25;
+  letter-spacing: normal;
+  font-weight: map-get($font-weight, regular);
+
+  @include breakpoint-up(m) {
+    font-size: 1.5rem; // 24px
+  }
+}
+
+%h6 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem; // 18px
+  line-height: 1.277;
+  letter-spacing: normal;
+  font-weight: map-get($font-weight, bold);
+
+  @include breakpoint-up(m) {
+    font-size: 1.25rem; // 20px
+    line-height: 1.25;
+    letter-spacing: 0.4px; // 0.4px
+  }
+}
+
+%subtitle1 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem; // 18px
+  line-height: 1.277;
+  letter-spacing: 0.005rem; // 0.08px
+  font-weight: map-get($font-weight, regular);
+
+  @include breakpoint-up(m) {
+    font-size: 1.25rem; // 20px
+    line-height: 1.25;
+    letter-spacing: 0.75px; // 0.75px
+  }
+}
+
+%subtitle2 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem; // 18px
+  line-height: 1.5;
+  letter-spacing: 0.005rem; // 0.08px
+  font-weight: map-get($font-weight, bold);
+}
+
+%body1 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem; // 18px
+  line-height: 1.5;
+  letter-spacing: 0.019rem; // 0.3px
+  font-weight: map-get($font-weight, regular);
+
+  a {
+    @extend %link-defaults;
+    font-weight: map-get($font-weight, semibold);
+    text-decoration: underline;
+  }
+
+  strong {
+    font-weight: map-get($font-weight, semibold);
+  }
+}
+
+%body2-default {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem; // 16px
+  line-height: 1.5;
+  letter-spacing: 0.009rem; // 0.15px
+  font-weight: map-get($font-weight, regular);
+}
+
+%body2 {
+  @extend %body2-default;
+
+  a {
+    @extend %body2link;
+  }
+
+  strong {
+    @extend %body2strong;
+  }
+}
+
+%body2link {
+  @extend %body2-default;
+  @extend %link-defaults;
+
+  font-weight: map-get($font-weight, semibold);
+  text-decoration: underline;
+}
+
+%body2strong {
+  @extend %body2-default;
+
+  font-weight: map-get($font-weight, semibold);
+}
+
+%button {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.285;
+  letter-spacing: 0.047rem; // 0.75px
+  font-weight: map-get($font-weight, semibold);
+}
+
+%link {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem; // 16px
+  line-height: 1.5;
+  letter-spacing: 0.009rem; // 0.15px
+  font-weight: map-get($font-weight, semibold);
+
+  @extend %link-defaults;
+}
+
+%caption {
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.75rem; // 12px
+  line-height: 1.5;
+  letter-spacing: 0.019rem; // 0.3px
+  font-weight: map-get($font-weight, semibold);
+
+  a {
+    @extend %link-defaults;
+
+    font-weight: map-get($font-weight, semibold);
+  }
+
+  strong {
+    font-weight: map-get($font-weight, semibold);
+  }
+}
+
+%caption1 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.75rem; // 12px
+  line-height: 1.5;
+  letter-spacing: 0.019rem; // 0.3px
+  font-weight: map-get($font-weight, bold);
+}
+
+%caption2 {
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.75rem; // 12px
+  line-height: 1.5;
+  letter-spacing: 0.019rem; // 0.3px
+  font-weight: map-get($font-weight, regular);
+
+  a {
+    @extend %link-defaults;
+  }
+}
+
+%link-defaults {
+  -webkit-font-smoothing: antialiased;
+  color: $colors-brand-primary;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%overline {
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.75rem; // 12px
+  line-height: 1.5;
+  letter-spacing: 0.044rem; // 0.7px
+  font-weight: map-get($font-weight, bold);
+  text-transform: uppercase;
+}

@@ -1,0 +1,297 @@
+{
+    "desktop": {
+        "h1": {
+            "fontSize": 96,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": -1.5,
+            "lineHeight": "108px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h2": {
+            "fontSize": 60,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": -0.5,
+            "lineHeight": "68px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h3": {
+            "fontSize": 48,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.3,
+            "lineHeight": "60px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h4": {
+            "fontSize": 32,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.5,
+            "lineHeight": "40px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h5": {
+            "fontSize": 24,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0,
+            "lineHeight": "30px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h6": {
+            "fontSize": 20,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 700,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.4,
+            "lineHeight": "25px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "subtitle1": {
+            "fontSize": 20,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 400,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.4,
+            "lineHeight": "25px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        }
+    },
+    "mobile": {
+        "h1": {
+            "fontSize": 60,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": -0.5,
+            "lineHeight": "68px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h2": {
+            "fontSize": 32,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.5,
+            "lineHeight": "36px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h3": {
+            "fontSize": 28,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.3,
+            "lineHeight": "35px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h4": {
+            "fontSize": 24,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.5,
+            "lineHeight": "30px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h5": {
+            "fontSize": 20,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 900,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0,
+            "lineHeight": "25px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "h6": {
+            "fontSize": 18,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 700,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0,
+            "lineHeight": "23px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "subtitle1": {
+            "fontSize": 18,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 400,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.08,
+            "lineHeight": "23px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        }
+    },
+    "default": {
+        "subtitle2": {
+            "fontSize": 18,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 700,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.08,
+            "lineHeight": "22.5px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "caption": {
+            "fontSize": 14,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 600,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.3,
+            "lineHeight": "17.5px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "overline": {
+            "fontSize": 14,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 700,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.7,
+            "lineHeight": "15.75px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "uppercase"
+        },
+        "button": {
+            "fontSize": 16,
+            "textDecoration": "none",
+            "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+            "fontWeight": 600,
+            "fontStyle": "normal",
+            "fontStretch": "normal",
+            "letterSpacing": 0.3,
+            "lineHeight": "24px",
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+        },
+        "body1": {
+            "normal": {
+                "fontSize": 18,
+                "textDecoration": "none",
+                "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+                "fontWeight": 400,
+                "fontStyle": "normal",
+                "fontStretch": "normal",
+                "letterSpacing": 0.3,
+                "lineHeight": "27px",
+                "paragraphIndent": 0,
+                "paragraphSpacing": 16,
+                "textCase": "none"
+            },
+            "strong": {
+                "fontWeight": 600,
+                "lineHeight": "inheritpx"
+            },
+            "link": {
+                "textDecoration": "underline",
+                "lineHeight": "undefinedpx"
+            }
+        },
+        "body2": {
+            "normal": {
+                "fontSize": 16,
+                "textDecoration": "none",
+                "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+                "fontWeight": 400,
+                "fontStyle": "normal",
+                "fontStretch": "normal",
+                "letterSpacing": 0.3,
+                "lineHeight": "24px",
+                "paragraphIndent": 0,
+                "paragraphSpacing": 0,
+                "textCase": "none"
+            },
+            "strong": {
+                "fontWeight": 600,
+                "lineHeight": "inheritpx"
+            },
+            "link": {
+                "fontSize": 16,
+                "textDecoration": "underline",
+                "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+                "fontWeight": 400,
+                "fontStyle": "normal",
+                "fontStretch": "normal",
+                "letterSpacing": 0.3,
+                "lineHeight": "24px",
+                "paragraphIndent": 0,
+                "paragraphSpacing": 0,
+                "textCase": "none"
+            }
+        }
+    }
+}

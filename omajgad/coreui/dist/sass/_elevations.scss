@@ -1,0 +1,10 @@
+@import './variables';
+@import './mixins/elevation';
+
+$elevation-list: 0, 1, 2, 3, 4, 6, 8, 9, 12, 16, 24;
+
+@each $elevation in $elevation-list {
+  %elevation-z#{$elevation} {
+    @include elevation($elevation);
+  }
+}

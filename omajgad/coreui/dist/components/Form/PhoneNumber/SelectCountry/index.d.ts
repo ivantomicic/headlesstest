@@ -1,0 +1,20 @@
+import { FC } from 'react';
+import { TextFieldProps } from '@mui/material/TextField';
+import { CountriesMap } from 'lib/components/Form/PhoneNumber/constants/countries';
+import { CountryCode } from 'libphonenumber-js';
+import { TestableComponentProps } from 'lib/components/types';
+export declare const testId = "select-country";
+export declare const testIdPhoneCode = "phone-code";
+export declare const testIdOption = "country-option";
+export type SelectCountryProps = {
+    containerWidth?: string;
+    selectedCountry: CountryCode;
+    ariaLabelCode?: string;
+    onChange: (value: CountryCode) => void;
+    textFieldProps?: TextFieldProps;
+    containerProps?: TestableComponentProps;
+    error?: boolean;
+    disabled?: boolean;
+    countriesMap?: CountriesMap;
+};
+export declare const SelectCountry: FC<SelectCountryProps>;

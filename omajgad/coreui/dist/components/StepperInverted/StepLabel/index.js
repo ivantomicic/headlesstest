@@ -1,0 +1,58 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.StepLabel = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _material = require("@mui/material");
+var _mui = require("tss-react/mui");
+var _designTokens = require("@crowdhouse/design-tokens");
+var _jsxRuntime = require("react/jsx-runtime");
+var _excluded = ["children"];
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var useStyles = (0, _mui.makeStyles)()(function (theme) {
+  var _label;
+  return {
+    iconContainer: {
+      paddingRight: theme.spacing(2)
+    },
+    root: {
+      padding: 0
+    },
+    label: (_label = {
+      // We apply the correct font size here, because the implementation renders a typography but with body2
+      // https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/StepLabel/StepLabel.js
+      color: _designTokens.colors.text.primaryInverse
+    }, _defineProperty(_label, "&.".concat(_material.stepLabelClasses.completed), {
+      color: _designTokens.colors.text.primaryInverse
+    }), _defineProperty(_label, "&.".concat(_material.stepLabelClasses.active), {
+      color: _designTokens.colors.text.primaryInverse
+    }), _label),
+    // we need the active and completed defined, event empty,
+    // otherwise the active and completed colors are not applied
+    active: {},
+    completed: {}
+  };
+});
+var StepLabel = function StepLabel(_ref) {
+  var children = _ref.children,
+    props = _objectWithoutProperties(_ref, _excluded);
+  var _useStyles = useStyles(),
+    classes = _useStyles.classes;
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)(_material.StepLabel, _objectSpread(_objectSpread({
+    classes: classes
+  }, props), {}, {
+    children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_material.Typography, {
+      variant: "body1",
+      className: "strong",
+      children: children
+    })
+  }));
+};
+exports.StepLabel = StepLabel;

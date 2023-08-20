@@ -1,0 +1,152 @@
+@import './variables';
+$transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+$hero-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+$transparent: rgba(0, 0, 0, 0);
+
+.chBtn,
+.core.chBtn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 3px;
+  color: $colors-base-white;
+  background-color: $colors-brand-secondary;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+
+  &.isIcon {
+    border-radius: 50px;
+    padding: $spacing-2;
+
+    svg path {
+      fill: currentColor;
+    }
+
+    &.isLoading {
+      padding: 12px;
+    }
+  }
+
+  &.isLoading {
+    padding: 11px 24px;
+  }
+
+  &:hover {
+    background-color: darken($colors-brand-secondary, 10%);
+  }
+
+  &:active {
+    background-color: $colors-brand-secondary;
+    outline: none;
+  }
+
+  &.secondary {
+    background-color: $colors-base-white;
+    color: $colors-brand-primaryAccessible;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 4px 0 rgba(0, 0, 0, 0.13);
+    transition: $transition;
+
+    &:active {
+      background-color: $transparent;
+    }
+
+    &:hover {
+      background-color: $colors-brand-primaryLight;
+      box-shadow: none;
+      transition: $transition;
+    }
+
+    &.isIcon {
+      svg path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  &.tertiary {
+    background-color: $transparent;
+    color: $colors-brand-primaryAccessible;
+
+    &:active {
+      background-color: $transparent;
+    }
+
+    &:hover {
+      background-color: $colors-brand-primaryLight;
+
+      &:active {
+        background-color: $transparent;
+      }
+    }
+
+    &.isIcon {
+      svg path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  &.strong,
+  &.weak {
+    padding: 18px 24px;
+    transition: $transition;
+
+    &.isLoading {
+      padding: 15px 24px;
+      box-shadow: $hero-shadow;
+
+      &.isIcon {
+        padding: $spacing-2;
+      }
+    }
+
+    &:active,
+    &:hover {
+      box-shadow: $hero-shadow;
+      transition: $transition;
+    }
+
+    &.isIcon {
+      padding: $spacing-2 + $spacing-05;
+    }
+  }
+
+  &.strong {
+    box-shadow: 0 22px 40px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &.weak {
+    background-color: $colors-base-white;
+    color: $colors-brand-secondary;
+    box-shadow: 0 22px 40px 0 rgba(0, 0, 0, 0.05);
+
+    &:active,
+    &:hover {
+      background-color: $colors-brand-secondaryLight;
+    }
+
+    &.isIcon {
+      svg path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  &.disabled {
+    background-color: $colors-base-grey300;
+    color: $colors-base-grey600;
+    box-shadow: none;
+    pointer-events: auto;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $colors-base-grey300;
+    }
+
+    &.isIcon {
+      svg path {
+        fill: $colors-base-grey700;
+      }
+    }
+  }
+}

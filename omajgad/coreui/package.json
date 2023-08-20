@@ -1,0 +1,255 @@
+{
+  "name": "@crowdhouse/coreui",
+  "version": "27.10.1",
+  "description": "Core UI elements",
+  "author": "Crowdhouse FrontEnd Team",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/crowdhouse/crowdhouse-ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crowdhouse/crowdhouse-ui"
+  },
+  "homepage": "https://github.com/crowdhouse/crowdhouse-ui",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "dotenv -- bash -c 'npm run build:library && npm run build:storybook'",
+    "build:library": "rm -rf dist && npx babel --extensions '.ts,.tsx' --ignore '**/*.test.tsx' src/lib --out-dir dist --copy-files --no-copy-ignored && find dist -name '__snapshots__' | xargs rm -r && npm run types",
+    "build:storybook": "npx build-storybook -o dist-storybook --loglevel error --quiet --disable-telemetry",
+    "test": "react-scripts test --watch --colors --maxWorkers=75%",
+    "test:ci": "react-scripts test ---colors --watchAll=false --maxWorkers=75% --coverage=true --ci --bail --silent",
+    "test:staged": "npm test -- --ci --watchAll=false --bail --findRelatedTests --coverage=false",
+    "types": "tsc -p tsconfig.types.json && tsc -p tsconfig.types-libs.json",
+    "lint": "npx concurrently --kill-others-on-fail --names \"tsc,lint-js,lint-scss,prettier\" -c \"bgBlue.bold,bgGreen.bold,bgYellow.bold,bgWhite.bold\" \"npx tsc\" \"npm run lint:js\" \"npm run lint:scss\" \"npm run prettier:check\"",
+    "lint:js": "eslint --quiet ./src --ext js,ts,jsx,tsx,json",
+    "lint:scss": "stylelint src/**/*.module.scss",
+    "develop": "rm -rf dist && npx babel --extensions '.ts,.tsx' --watch --ignore '**/*.test.tsx' src/lib --out-dir dist --copy-files --no-copy-ignored && find dist -name '__snapshots__' | xargs rm -r && npm run types",
+    "validate": "npx concurrently --kill-others-on-fail --names \"tsc,lint-js,lint-scss,prettier,test\" -c \"bgBlue.bold,bgGreen.bold,bgYellow.bold,bgWhite.bold,bgMagenta.bold\" \"npx tsc\" \"npm run lint:js\" \"npm run lint:scss\" \"npm run prettier:check\" \"npm run test:ci\" ",
+    "prettier": "prettier '{src,tests}/**/*.{js,jsx,ts,tsx,json,css,scss}'",
+    "prettier:write": "npm run prettier -- --write",
+    "prettier:check": "npm run prettier -- --check",
+    "storybook": "start-storybook -p 6006",
+    "deploy": "aws s3 cp dist-storybook $S3_STORYBOOK_BUCKET/ --recursive --quiet",
+    "setup": "npm ci",
+    "publish:package": "npx semantic-release",
+    "chromatic": "npx chromatic --project-token=8298131fbf0f --exit-once-uploaded"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@crowdhouse/eslint-config-react"
+    ],
+    "rules": {
+      "testing-library/prefer-screen-queries": 0,
+      "testing-library/no-container": 0,
+      "graphql/no-deprecated-fields": 0,
+      "react/require-default-props": 0
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=14.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@crowdhouse/design-tokens": "^4.1.5",
+    "@crowdhouse/eslint-config-react": "^3.0.13",
+    "@crowdhouse/icons": "^11.8.1",
+    "@crowdhouse/illustrations": "^2.7.1",
+    "@crowdhouse/prettier-config": "^1.0.2",
+    "@emotion/cache": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.15",
+    "@mui/material": "^5.10.15",
+    "@mui/x-date-pickers": "^5.0.8",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^9.0.2",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@storybook/addon-a11y": "^6.5.15",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/node-logger": "^6.5.15",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.15",
+    "@storybook/storybook-deployer": "^2.8.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/css-mediaquery": "^0.1.1",
+    "@types/google-map-react": "^2.1.3",
+    "@types/google.maps": "^3.50.5",
+    "@types/jest": "^26.0.20",
+    "@types/jest-axe": "^3.5.2",
+    "@types/lodash": "^4.14.189",
+    "@types/luxon": "^2.3.1",
+    "@types/node": "^12.19.13",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@types/react-router-dom": "^5.3.3",
+    "@xstate/inspect": "^0.7.0",
+    "@xstate/react": "^3.0.1",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "babel-plugin-tsconfig-paths-module-resolver": "^1.0.3",
+    "chromatic": "^5.9.2",
+    "classnames": "^2.2.6",
+    "concurrently": "^7.0.0",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "css-mediaquery": "^0.1.2",
+    "date-fns": "^2.29.3",
+    "dotenv-cli": "^7.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-graphql": "^4.0.0",
+    "eslint-plugin-no-relative-import-paths": "^1.5.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "formik": "^2.2.9",
+    "full-icu": "^1.3.1",
+    "google-map-react": "^2.1.10",
+    "graphql": "^15.8.0",
+    "history": "^4.10.1",
+    "husky": "^8.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "is-ci": "^3.0.1",
+    "jest-axe": "^5.0.1",
+    "jest-watch-typeahead": "^0.6.5",
+    "libphonenumber-js": "^1.10.14",
+    "lint-staged": "^13.0.3",
+    "lodash": "^4.17.21",
+    "luxon": "^2.4.0",
+    "nanoid": "^3.1.25",
+    "prettier": "^2.8.0",
+    "react": "^18.0.0",
+    "react-device-detect": "^2.2.2",
+    "react-dnd": "^14.0.3",
+    "react-dnd-html5-backend": "^14.0.1",
+    "react-dnd-touch-backend": "^14.1.0",
+    "react-dom": "^18.0.0",
+    "react-intl": "^6.2.1",
+    "react-middle-ellipsis": "^1.2.2",
+    "react-number-format": "^5.1.1",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.56.1",
+    "semantic-release": "^19.0.0",
+    "semantic-release-monorepo": "^7.0.5",
+    "snapshot-diff": "^0.9.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "tss-react": "^4.4.4",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "xstate": "^4.35.1",
+    "yup": "^0.32.9"
+  },
+  "peerDependencies": {
+    "@crowdhouse/design-tokens": "^4.1.5",
+    "@crowdhouse/icons": "^11.8.1",
+    "@crowdhouse/illustrations": "^2.7.1",
+    "@emotion/cache": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.15",
+    "@mui/material": "^5.10.15",
+    "@mui/x-date-pickers": "^5.0.8",
+    "@types/lodash": "^4.14.189",
+    "@xstate/react": "^3.0.1",
+    "formik": "^2.2.9",
+    "google-map-react": "^2.1.10",
+    "libphonenumber-js": "^1.10.14",
+    "lodash": "^4.17.21",
+    "luxon": "^2.4.1",
+    "nanoid": "^3.1.25",
+    "react": "^18.0.0",
+    "react-device-detect": "^2.2.2",
+    "react-dnd": "^14.0.3",
+    "react-dnd-html5-backend": "^14.0.1",
+    "react-dnd-touch-backend": "^14.1.0",
+    "react-dom": "^18.0.0",
+    "react-intl": "^6.2.1",
+    "react-middle-ellipsis": "^1.2.1",
+    "react-number-format": "^5.1.1",
+    "react-router-dom": "^5.3.4",
+    "sass": "^1.56.1",
+    "tss-react": "^4.4.4",
+    "xstate": "^4.35.1",
+    "yup": "^0.32.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix",
+      "npm run prettier:write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run test:staged"
+    ]
+  },
+  "storybook-deployer": {
+    "gitUsername": "ciCrowdhouse",
+    "gitEmail": "ciCrowdhouse@crowdhouse.ch",
+    "commitMessage": "Deploy Storybook"
+  },
+  "jest": {
+    "clearMocks": true,
+    "resetMocks": false,
+    "coverageReporters": [
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.tsx",
+      "!**/*.d.ts",
+      "!**/*.spec.js*",
+      "!**/*.spec.ts*",
+      "!**/*.test.ts*",
+      "!**/*.test.js*",
+      "!**/__mocks__/**",
+      "!src/apollo/generated.ts",
+      "!src/apollo/helpers.ts",
+      "!**/*.graphql.d.ts"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

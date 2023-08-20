@@ -1,0 +1,23 @@
+{
+  "name": "@crowdhouse/icons",
+  "version": "11.8.1",
+  "description": "Icons used throughout the crowdhouse applications",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crowdhouse/icons.git"
+  },
+  "files": [
+    "svg/*"
+  ],
+  "keywords": [
+    "icons",
+    "svg",
+    "crowdhouse"
+  ],
+  "author": "Crowdhouse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crowdhouse/icons/issues"
+  },
+  "homepage": "https://github.com/crowdhouse/icons#readme"
+}

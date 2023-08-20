@@ -1,0 +1,135 @@
+@import '../variables';
+@import 'breakpoints';
+
+@mixin max-width-L() {
+  max-width: $breakpoint-l;
+}
+
+@mixin max-width-M() {
+  max-width: $breakpoint-m;
+}
+
+@mixin padding-left() {
+  padding-left: $grid-gutter-xs;
+
+  @include breakpoint-up(s) {
+    padding-left: $grid-gutter-s;
+  }
+
+  @include breakpoint-up(m) {
+    padding-left: $grid-gutter-m;
+  }
+}
+
+@mixin padding-right() {
+  padding-right: $grid-gutter-xs;
+
+  @include breakpoint-up(s) {
+    padding-right: $grid-gutter-s;
+  }
+
+  @include breakpoint-up(m) {
+    padding-right: $grid-gutter-m;
+  }
+}
+
+@mixin padding-top() {
+  padding-top: $grid-gutter-xs;
+
+  @include breakpoint-up(s) {
+    padding-top: $grid-gutter-s;
+  }
+
+  @include breakpoint-up(m) {
+    padding-top: $grid-gutter-m;
+  }
+}
+
+@mixin padding-bottom() {
+  padding-bottom: $grid-gutter-xs;
+
+  @include breakpoint-up(s) {
+    padding-bottom: $grid-gutter-s;
+  }
+
+  @include breakpoint-up(m) {
+    padding-bottom: $grid-gutter-m;
+  }
+}
+
+@mixin margin-top() {
+  margin-top: $grid-gutter-xs;
+
+  @include breakpoint-up(s) {
+    margin-top: $grid-gutter-s;
+  }
+
+  @include breakpoint-up(m) {
+    margin-top: $grid-gutter-m;
+  }
+}
+
+@mixin margin-bottom() {
+  margin-bottom: $grid-gutter-xs;
+
+  @include breakpoint-up(s) {
+    margin-bottom: $grid-gutter-s;
+  }
+
+  @include breakpoint-up(m) {
+    margin-bottom: $grid-gutter-m;
+  }
+}
+
+@mixin padding-horizontal() {
+  @include padding-left;
+  @include padding-right;
+}
+
+@mixin padding-vertical() {
+  @include padding-top;
+  @include padding-bottom;
+}
+
+@mixin margin-vertical() {
+  @include margin-top;
+  @include margin-bottom;
+}
+
+@mixin fullWidth() {
+  margin-left: -$grid-gutter-xs;
+  margin-right: -$grid-gutter-xs;
+
+  @include breakpoint-up(s) {
+    margin-left: -$grid-gutter-s;
+    margin-right: -$grid-gutter-s;
+  }
+
+  @include breakpoint-up(m) {
+    margin-left: -$grid-gutter-m;
+    margin-right: -$grid-gutter-m;
+  }
+}
+
+@mixin fullWidthCell() {
+  @include fullWidth();
+
+  @include breakpoint-up(s) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@mixin fullWidthTable() {
+  @include fullWidth();
+
+  width: calc(100% + #{$grid-gutter-xs * 2});
+
+  @include breakpoint-up(s) {
+    width: calc(100% + #{$grid-gutter-s * 2});
+  }
+
+  @include breakpoint-up(m) {
+    width: calc(100% + #{$grid-gutter-m * 2});
+  }
+}

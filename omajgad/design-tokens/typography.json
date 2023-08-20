@@ -1,0 +1,512 @@
+{
+  "desktop": {
+    "h1": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 96,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": -1.5,
+        "lineHeight": 108,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:3f341b6b8890bd9b3e2de2d8409ae36efdb399cf,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h2": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 60,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": -0.5,
+        "lineHeight": 68,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:a834f912ebd31d0839784db78d78acea5e2efee8,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h3": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 48,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.3,
+        "lineHeight": 60,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:b57e8ce6d3ec276de9a8b52de53eb8feb65ca12f,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h4": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 32,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.5,
+        "lineHeight": 40,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:97db737edef3aa503bbe4ab53a618aa091d1496c,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h5": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 24,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 30,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:59d922f7803bc5b4c47e5cb4da2e97a47e2718a2,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h6": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 20,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 700,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.4,
+        "lineHeight": 25,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:0cb2f947a18d6eca7e0837229da2df510ed0f4a9,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "subtitle1": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 20,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.4,
+        "lineHeight": 25,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:039af856afa124eaf6a41cb3977d87d86da5e21b,",
+          "exportKey": "font"
+        }
+      }
+    }
+  },
+  "mobile": {
+    "h1": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 60,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": -0.5,
+        "lineHeight": 68,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:4a00f7c4d530ea825b07bac4968cfb27923e19e2,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h2": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 32,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.5,
+        "lineHeight": 36,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:152f0ccc3485acb21a92c76569089502cf4dcc2b,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h3": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 28,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.3,
+        "lineHeight": 35,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:d6a2051a06f944a80550615b28c90e45dd4927ac,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h4": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 24,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.5,
+        "lineHeight": 30,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:f0bf0a9a5903146dba3909b7dc3121180acc1336,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h5": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 20,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 900,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 25,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:1e516977cf017662c14d67e149c0dc4ef2366210,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "h6": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 18,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 700,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 23,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:fe1564c27c091bfd768f7a37dc1aa8359becccbb,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "subtitle1": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 18,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.08,
+        "lineHeight": 23,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:9889d79fb7861011512f66ffbecb20c297767757,",
+          "exportKey": "font"
+        }
+      }
+    }
+  },
+  "default": {
+    "subtitle2": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 18,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 700,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.08,
+        "lineHeight": 22.5,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:d6752953dd006dcd5acb2f7da84629686dadbbc3,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "caption": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 14,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 600,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.3,
+        "lineHeight": 17.5,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:1e56eb0676b7fe7a2ce22e0ea911f8701bad92a7,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "overline": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 14,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 700,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.7,
+        "lineHeight": 15.75,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "uppercase"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:b5e7dccb9d0bdf1e2e6703e7c446729b137e85ed,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "button": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 16,
+        "textDecoration": "none",
+        "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+        "fontWeight": 600,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.3,
+        "lineHeight": 24,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:8e8c1a47f8572aeb7f7cdffe564065e779721013,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "body1": {
+      "normal": {
+        "type": "custom-fontStyle",
+        "value": {
+          "fontSize": 18,
+          "textDecoration": "none",
+          "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+          "fontWeight": 400,
+          "fontStyle": "normal",
+          "fontStretch": "normal",
+          "letterSpacing": 0.3,
+          "lineHeight": 27,
+          "paragraphIndent": 0,
+          "paragraphSpacing": 16,
+          "textCase": "none"
+        },
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "styleId": "S:acc3884f3303cbcb6728af3a0f4b86c1e148370a,",
+            "exportKey": "font"
+          }
+        }
+      },
+      "strong": {
+        "type": "custom-fontStyle",
+        "value": {
+          "fontWeight": 600,
+          "lineHeight": "inherit"
+        },
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "styleId": "S:004b868111765281984ef28476433c7872e743b1,",
+            "exportKey": "font"
+          }
+        }
+      },
+      "link": {
+        "type": "custom-fontStyle",
+        "value": {
+          "textDecoration": "underline"
+        },
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "styleId": "S:5275de76d73a56e07ab2e21f8f4d65cf8ce4487d,",
+            "exportKey": "font"
+          }
+        }
+      }
+    },
+    "body2": {
+      "normal": {
+        "type": "custom-fontStyle",
+        "value": {
+          "fontSize": 16,
+          "textDecoration": "none",
+          "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+          "fontWeight": 400,
+          "fontStyle": "normal",
+          "fontStretch": "normal",
+          "letterSpacing": 0.3,
+          "lineHeight": 24,
+          "paragraphIndent": 0,
+          "paragraphSpacing": 0,
+          "textCase": "none"
+        },
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "styleId": "S:64b6298be66c1248b979d19e2ea9b5cb35e523e0,",
+            "exportKey": "font"
+          }
+        }
+      },
+      "strong": {
+        "type": "custom-fontStyle",
+        "value": {
+          "fontWeight": 600,
+          "lineHeight": "inherit"
+        },
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "styleId": "S:81842faa6cf43da7f540ff8275cfd4785d8b67bd,",
+            "exportKey": "font"
+          }
+        }
+      },
+      "link": {
+        "type": "custom-fontStyle",
+        "value": {
+          "fontSize": 16,
+          "textDecoration": "underline",
+          "fontFamily": "\"source-sans-pro\", \"Source Sans Pro\", Arial, sans-serif",
+          "fontWeight": 400,
+          "fontStyle": "normal",
+          "fontStretch": "normal",
+          "letterSpacing": 0.3,
+          "lineHeight": 24,
+          "paragraphIndent": 0,
+          "paragraphSpacing": 0,
+          "textCase": "none"
+        },
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "styleId": "S:0269149a6ef67e07750c246f528541f13f2069a5,",
+            "exportKey": "font"
+          }
+        }
+      }
+    }
+  }
+}

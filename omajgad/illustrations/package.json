@@ -1,0 +1,23 @@
+{
+  "name": "@crowdhouse/illustrations",
+  "version": "2.7.1",
+  "description": "Illustrations used throughout the crowdhouse applications",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:crowdhouse/illustrations.git"
+  },
+  "keywords": [
+    "illustrations",
+    "svg",
+    "crowdhouse"
+  ],
+  "scripts": {
+    "build": "rsync -av ./svg package.json README.md ./dist --delete"
+  },
+  "author": "Crowdhouse AG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crowdhouse/illustrations/issues"
+  },
+  "homepage": "https://github.com/crowdhouse/illustrations#readme"
+}

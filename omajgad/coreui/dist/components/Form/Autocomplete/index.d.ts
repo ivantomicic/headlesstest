@@ -1,0 +1,31 @@
+import { FocusEventHandler, ReactElement, SyntheticEvent } from 'react';
+import { TestableComponentProps } from 'lib/components/types';
+import { AutocompleteItemDetailsLookup, AutocompleteItemLookup, AutocompleteOptionBase } from './types';
+export interface AutocompleteProps<T extends AutocompleteOptionBase, U> extends TestableComponentProps {
+    lookupFn: AutocompleteItemLookup<T>;
+    lookupDetailsFn?: AutocompleteItemDetailsLookup<T, U>;
+    onItemNotFound?: (value: string | undefined, trackingLabel: string) => void;
+    onItemReset?: () => void;
+    onItemFound?: (item: T, details: U) => void;
+    onChange?: (value: string) => void;
+    onSelect: (event: SyntheticEvent) => void;
+    onTrackUserItemManualClick?: (value: string | undefined, options: number, trackingLabel: string) => void;
+    onBlur?: FocusEventHandler<HTMLDivElement>;
+    onClose?: () => void;
+    disabled?: boolean;
+    disableClearable?: boolean;
+    name?: string;
+    label?: string;
+    value?: string;
+    selectedItem?: T;
+    trackingLabel?: string;
+    helperText?: string;
+    labelNotFound: string;
+    limit?: number;
+    error?: string;
+    returnAttribute?: keyof T;
+    id?: string;
+    options?: T[];
+    onLookup?: (search: string) => void;
+}
+export declare function Autocomplete<T extends AutocompleteOptionBase, U>({ onItemNotFound, onItemFound, onItemReset, onChange, onSelect, onTrackUserItemManualClick, onBlur, disableClearable, disabled, name, label, value, selectedItem, trackingLabel, lookupFn, lookupDetailsFn, helperText, labelNotFound, 'data-testid': dataTestId, limit, error, returnAttribute, id, options: injectedOptions, onLookup, onClose, }: AutocompleteProps<T, U>): ReactElement;

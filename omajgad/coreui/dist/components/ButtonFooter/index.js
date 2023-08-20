@@ -1,0 +1,35 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ButtonFooter = void 0;
+var _material = require("@mui/material");
+var _Button = require("./../Button");
+var _jsxRuntime = require("react/jsx-runtime");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var ButtonFooter = function ButtonFooter(_ref) {
+  var onButtonClick = _ref.onButtonClick,
+    buttonLabel = _ref.buttonLabel,
+    buttonProps = _ref.buttonProps;
+  var theme = (0, _material.useTheme)();
+  var isSmallScreen = (0, _material.useMediaQuery)(theme.breakpoints.down('sm'));
+  return /*#__PURE__*/(0, _jsxRuntime.jsx)(_material.Box, {
+    mb: 7,
+    children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_material.Grid, {
+      container: true,
+      direction: "row",
+      justifyContent: "flex-end",
+      children: /*#__PURE__*/(0, _jsxRuntime.jsx)(_Button.Button, {
+        onClick: onButtonClick,
+        buttonProps: _objectSpread(_objectSpread({}, buttonProps), {}, {
+          fullWidth: isSmallScreen
+        }),
+        children: buttonLabel
+      })
+    })
+  });
+};
+exports.ButtonFooter = ButtonFooter;
