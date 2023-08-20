@@ -18,7 +18,7 @@ export default function Component(props) {
 			<h1>
 				{title} - {siteTitle}
 			</h1>
-			{content}
+			<div dangerouslySetInnerHTML={{ __html: content }} />
 		</>
 	);
 }
