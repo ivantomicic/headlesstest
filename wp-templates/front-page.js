@@ -1,5 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { BlogInfoFragment } from "../fragments/GeneralSettings";
+import Link from "next/link";
 
 export default function Component() {
 	const { data } = useQuery(Component.query);
@@ -23,7 +24,7 @@ export default function Component() {
 					{data?.pages?.edges.map(({ node }) => (
 						<li key={node.id}>
 							{/* set anchor based on node.slug */}
-							<a href={`/${node.slug}`}>{node.title}</a>
+							<Link href={`/${node.slug}`}>{node.title}</Link>
 						</li>
 					))}
 				</ul>
