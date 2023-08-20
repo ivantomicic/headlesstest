@@ -15,7 +15,18 @@ export default function Component() {
 				<p>
 					This page is utilizing the "front-page" WordPress template.
 				</p>
-				<code>wp-templates/front-page.js</code>
+				<a href="#" className="btn">
+					Click me
+				</a>
+				{/* map thru data.pages */}
+				<ul>
+					{data?.pages?.edges.map(({ node }) => (
+						<li key={node.id}>
+							{/* set anchor based on node.slug */}
+							<a href={`/${node.slug}`}>{node.title}</a>
+						</li>
+					))}
+				</ul>
 			</div>
 		</>
 	);
@@ -24,6 +35,15 @@ export default function Component() {
 Component.query = gql`
 	${BlogInfoFragment}
 	query GetPageData {
+		pages {
+			edges {
+				node {
+					id
+					title
+					slug
+				}
+			}
+		}
 		generalSettings {
 			...BlogInfoFragment
 		}
