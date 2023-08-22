@@ -10,25 +10,15 @@ export default function Component() {
 
 	return (
 		<>
-			<h1>{siteTitle} - Front Page</h1>
-			<div className="text-center">
-				<p>{siteTitle}</p>
-				<p>
-					This page is utilizing the "front-page" WordPress template.
-				</p>
-				<a href="#" className="btn">
-					Click me
-				</a>
-				{/* map thru data.pages */}
-				<ul>
-					{data?.pages?.edges.map(({ node }) => (
-						<li key={node.id}>
-							{/* set anchor based on node.slug */}
-							<Link href={`/${node.slug}`}>{node.title}</Link>
-						</li>
-					))}
-				</ul>
-			</div>
+			<h1>{siteTitle}</h1>
+			<ul>
+				{data?.pages?.edges.map(({ node }) => (
+					<li key={node.id}>
+						{/* set anchor based on node.slug */}
+						<Link href={`/${node.slug}`}>{node.title}</Link>
+					</li>
+				))}
+			</ul>
 		</>
 	);
 }
