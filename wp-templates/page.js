@@ -55,11 +55,8 @@ Page.query = gql`
 			title
 			content
 			editorBlocks {
-				name
 				id: clientId
 				parentId: parentClientId
-				renderedHtml
-
 				# Get all block fragment keys and call them in the query
 				${getFragmentDataFromBlocks(blocks).keys}
 			}
