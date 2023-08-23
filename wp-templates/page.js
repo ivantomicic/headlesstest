@@ -18,6 +18,9 @@ export default function Page(props) {
 		title: "",
 	};
 
+	console.log("bleja");
+	console.log(editorBlocks);
+
 	const blocks = flatListToHierarchical(editorBlocks);
 
 	const menuItems =
