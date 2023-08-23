@@ -1,6 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
 import { BlogInfoFragment } from "../fragments/GeneralSettings";
-import { Header } from "../components";
 import Link from "next/link";
 
 export default function Component() {
@@ -9,11 +8,8 @@ export default function Component() {
 	const { title: siteTitle, description: siteDescription } =
 		data?.generalSettings;
 
-	const menuItems = data?.drivenThemeSettings?.themeSettings?.mainNavigation;
-
 	return (
 		<>
-			<Header menuItems={menuItems} />
 			<div style={{ padding: "50px" }}>
 				<h1>{siteTitle}</h1>
 				{/* create ul tag with padding of 50px */}
@@ -32,7 +28,6 @@ export default function Component() {
 
 Component.query = gql`
 	${BlogInfoFragment}
-	${Header.fragments.entry}
 
 	query GetPageData {
 		pages {
@@ -47,9 +42,6 @@ Component.query = gql`
 		}
 		generalSettings {
 			...BlogInfoFragment
-		}
-		drivenThemeSettings {
-			...HeaderFragment
 		}
 	}
 `;
