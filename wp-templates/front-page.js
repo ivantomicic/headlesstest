@@ -14,15 +14,18 @@ export default function Component() {
 	return (
 		<>
 			<Header menuItems={menuItems} />
-			<h1>{siteTitle}</h1>
-			<ul>
-				{data?.pages?.edges.map(({ node }) => (
-					<li key={node.id}>
-						{/* set anchor based on node.slug */}
-						<Link href={node.uri}>{node.title}</Link>
-					</li>
-				))}
-			</ul>
+			<div style={{ padding: "50px" }}>
+				<h1>{siteTitle}</h1>
+				{/* create ul tag with padding of 50px */}
+				<ul>
+					{data?.pages?.edges.map(({ node }) => (
+						<li key={node.id}>
+							{/* set anchor based on node.slug */}
+							<Link href={node.uri}>{node.title}</Link>
+						</li>
+					))}
+				</ul>
+			</div>
 		</>
 	);
 }
