@@ -2,11 +2,11 @@ import { gql } from "@apollo/client";
 import { WordPressBlocksViewer } from "@faustwp/blocks";
 import { BlogInfoFragment } from "../fragments/GeneralSettings";
 import blocks from "../wp-blocks";
-import { Header } from "../components";
+import { Header, Footer } from "../components";
 import flatListToHierarchical from "../utils/flatListToHierarchical";
 import getFragmentDataFromBlocks from "../utils/getFragmentDataFromBlocks";
 
-export default function Component(props) {
+export default function Page(props) {
 	// Loading state for previews
 	if (props.loading) {
 		return <>Loading...</>;
@@ -27,20 +27,22 @@ export default function Component(props) {
 		<>
 			<Header menuItems={menuItems} />
 			<WordPressBlocksViewer blocks={blocks} />
+			<Footer props={props.data.drivenThemeSettings.themeSettings} />
 		</>
 	);
 }
 
-Component.variables = ({ databaseId }, ctx) => {
+Page.variables = ({ databaseId }, ctx) => {
 	return {
 		databaseId,
 		asPreview: ctx?.asPreview,
 	};
 };
 
-Component.query = gql`
+Page.query = gql`
 	${BlogInfoFragment}
 	${Header.fragments.entry}
+	${Footer.fragments.entry}
 
 	# Get all block fragments and add them to the query
 	${getFragmentDataFromBlocks(blocks).entries}
@@ -64,6 +66,7 @@ Component.query = gql`
 		}
 		drivenThemeSettings {
 			...HeaderFragment
+			...FooterFragment
 		}
 	}
 `;

@@ -22,7 +22,7 @@ export default function DrivenDemoRequest(props) {
 				<form>
 					<input type="text" placeholder="Name" />
 					<input type="email" placeholder="Email address" />
-					<button type="submit" class="btn">
+					<button type="submit" className="btn">
 						Request Demo
 					</button>
 				</form>
