@@ -1,5 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { BlogInfoFragment } from "../fragments/GeneralSettings";
+import { Header } from "../components";
 import Link from "next/link";
 
 export default function Component() {
@@ -8,8 +9,11 @@ export default function Component() {
 	const { title: siteTitle, description: siteDescription } =
 		data?.generalSettings;
 
+	const menuItems = data?.drivenThemeSettings?.themeSettings?.mainNavigation;
+
 	return (
 		<>
+			<Header menuItems={menuItems} />
 			<h1>{siteTitle}</h1>
 			<ul>
 				{data?.pages?.edges.map(({ node }) => (
@@ -25,6 +29,8 @@ export default function Component() {
 
 Component.query = gql`
 	${BlogInfoFragment}
+	${Header.fragments.entry}
+
 	query GetPageData {
 		pages {
 			edges {
@@ -37,6 +43,9 @@ Component.query = gql`
 		}
 		generalSettings {
 			...BlogInfoFragment
+		}
+		drivenThemeSettings {
+			...HeaderFragment
 		}
 	}
 `;

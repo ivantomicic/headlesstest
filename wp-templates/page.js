@@ -2,6 +2,7 @@ import { gql } from "@apollo/client";
 import { WordPressBlocksViewer } from "@faustwp/blocks";
 import { BlogInfoFragment } from "../fragments/GeneralSettings";
 import blocks from "../wp-blocks";
+import { Header } from "../components";
 import flatListToHierarchical from "../utils/flatListToHierarchical";
 import getFragmentDataFromBlocks from "../utils/getFragmentDataFromBlocks";
 
@@ -17,15 +18,17 @@ export default function Component(props) {
 		title: "",
 	};
 
-	console.log("editorBlocks");
-	console.log(editorBlocks);
+	const menuItems =
+		props?.data?.drivenThemeSettings?.themeSettings?.mainNavigation;
 
 	const blocks = flatListToHierarchical(editorBlocks);
 
-	console.log("blocks");
-	console.log(blocks);
-
-	return <WordPressBlocksViewer blocks={blocks} />;
+	return (
+		<>
+			<Header menuItems={menuItems} />
+			<WordPressBlocksViewer blocks={blocks} />
+		</>
+	);
 }
 
 Component.variables = ({ databaseId }, ctx) => {
@@ -37,6 +40,7 @@ Component.variables = ({ databaseId }, ctx) => {
 
 Component.query = gql`
 	${BlogInfoFragment}
+	${Header.fragments.entry}
 
 	# Get all block fragments and add them to the query
 	${getFragmentDataFromBlocks(blocks).entries}
@@ -57,6 +61,9 @@ Component.query = gql`
 		}
 		generalSettings {
 			...BlogInfoFragment
+		}
+		drivenThemeSettings {
+			...HeaderFragment
 		}
 	}
 `;
