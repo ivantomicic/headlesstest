@@ -57,6 +57,7 @@ Page.query = gql`
 			editorBlocks {
 				id: clientId
 				parentId: parentClientId
+				renderedHtml
 				# Get all block fragment keys and call them in the query
 				${getFragmentDataFromBlocks(blocks).keys}
 			}
