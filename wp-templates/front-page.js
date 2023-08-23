@@ -19,7 +19,7 @@ export default function Component() {
 				{data?.pages?.edges.map(({ node }) => (
 					<li key={node.id}>
 						{/* set anchor based on node.slug */}
-						<Link href={`/${node.slug}`}>{node.title}</Link>
+						<Link href={node.uri}>{node.title}</Link>
 					</li>
 				))}
 			</ul>
@@ -38,6 +38,7 @@ Component.query = gql`
 					id
 					title
 					slug
+					uri
 				}
 			}
 		}
